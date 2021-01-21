@@ -1,0 +1,1 @@
+Home for all objects that will go into the game. This folder will pair scripts and scenes together, and will probably need further organization. For example, create "Characters", and "Characters/NPCS/Companions/" etc. I'll think about it as I progress through the course.
