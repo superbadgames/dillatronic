@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Down1.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends KinematicBody2D
+
+var _velocity = Vector2()
+var _speed = 50
+
+
+func _process(delta):
+	_move()
+	move_and_slide(_velocity)
+
+
+func _move():
+	if Input.is_action_pressed(\"move_up\"):
+		_velocity.y = -_speed
+	elif Input.is_action_pressed(\"move_down\"):
+		_velocity.y = _speed
+	elif Input.is_action_pressed(\"move_right\"):
+		_velocity.x = _speed
+	elif Input.is_action_pressed(\"move_left\"):
+		_velocity.x = -_speed
+	else:
+		_velocity = Vector2.ZERO
+"
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 11.7355
+
+[node name="Player" type="KinematicBody2D"]
+script = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
