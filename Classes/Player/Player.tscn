@@ -7,6 +7,7 @@ script/source = "extends KinematicBody2D
 
 var _velocity = Vector2()
 var _speed = 50
+var _speed_unit = 1.0
 
 
 func _process(delta):
@@ -16,15 +17,15 @@ func _process(delta):
 
 func _move():
 	if Input.is_action_pressed(\"move_up\"):
-		_velocity.y = -_speed
-	elif Input.is_action_pressed(\"move_down\"):
-		_velocity.y = _speed
-	elif Input.is_action_pressed(\"move_right\"):
-		_velocity.x = _speed
-	elif Input.is_action_pressed(\"move_left\"):
-		_velocity.x = -_speed
-	else:
-		_velocity = Vector2.ZERO
+		_velocity.y = -1.0
+	if Input.is_action_pressed(\"move_down\"):
+		_velocity.y = 1.0
+	if Input.is_action_pressed(\"move_right\"):
+		_velocity.x = 1.0
+	if Input.is_action_pressed(\"move_left\"):
+		_velocity.x = -1.0
+	
+	_velocity = _velocity * _speed_unit * _speed
 "
 
 [sub_resource type="CapsuleShape2D" id=1]
