@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Classes/PlayerCharacter/PlayerCharacter.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Down3.png" type="Texture" id=2]
@@ -13,20 +13,32 @@
 [ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Up3.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Up1.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Up2.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/LeftStrike1.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/LeftStrike2.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/LeftStrike3.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/RightStrike1.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/RightStrike2.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/DownStrike1.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/DownStrike2.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/UpStrike1.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/UpStrike3.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/RightStrike3.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/DownStrike3.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/UpStrike2.png" type="Texture" id=25]
 
 [sub_resource type="CapsuleShape2D" id=1]
 height = 10.8892
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "attack_left",
+"speed": 7.0
+}, {
 "frames": [ ExtResource( 10 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "walk_down",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "walk_right",
 "speed": 7.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 11 ) ],
@@ -34,14 +46,9 @@ animations = [ {
 "name": "walk_up",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "walk_left",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "idle_up",
+"name": "idle_right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
@@ -54,9 +61,34 @@ animations = [ {
 "name": "idle_left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "idle_right",
+"name": "walk_left",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "idle_up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "attack_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 25 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "attack_up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "attack_down",
 "speed": 5.0
 } ]
 
@@ -69,3 +101,10 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "idle_down"
+playing = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.75, 0.75 )
+smoothing_enabled = true
+editor_draw_limits = true

@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Tilemaps/Grass_Water_Dirt_tilemap.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Tilemaps/Tree_Rocks_object_tile_map.tres" type="TileSet" id=2]
 [ext_resource path="res://Classes/PlayerCharacter/PlayerChacter.tscn" type="PackedScene" id=3]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( -12.6174, -552.178 )
+b = Vector2( -7.62512, 390.839 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 56.5756, 415.057 )
+b = Vector2( 59.2338, -482.321 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( -657.482, 61.3895 )
+b = Vector2( 923.968, 51.0337 )
+
+[sub_resource type="SegmentShape2D" id=4]
+a = Vector2( 640.331, -98.8751 )
+b = Vector2( -870.669, -91.8751 )
 
 [node name="World" type="Node2D"]
 
@@ -20,3 +36,30 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 65545, 1, 0, 65556, 1, 0, 131076, 4, 0, 131087, 4, 0, 196638, 4, 0, 196639, 4, 0, 196640, 4, 0, 262169, 4, 0, 262170, 4, 0, 327683, 4, 0, 327689, 0, 0, 327705, 4, 0, 327706, 4, 0, 393224, 0, 0, 393225, 0, 0, 393241, 4, 0, 393242, 4, 0, 393243, 4, 0, 458760, 0, 0, 458778, 4, 0, 458779, 4, 0, 524295, 0, 0, 524296, 0, 0, 524314, 4, 0, 524315, 4, 0, 589831, 0, 0, 589849, 2, 0, 589851, 4, 0, 655388, 1, 0, 720904, 1, 0, 852004, 4, 0, 983043, 4, 0, 983071, 4, 0, 1048583, 4, 0, 1245189, 1, 0, 1245207, 4, 0, 1310732, 4, 0, 1310751, 1, 0 )
+
+[node name="Boundaries" type="Node2D" parent="."]
+
+[node name="RightWall" type="StaticBody2D" parent="Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/RightWall"]
+position = Vector2( 1342.94, 427.664 )
+shape = SubResource( 1 )
+
+[node name="LeftWall" type="StaticBody2D" parent="Boundaries"]
+position = Vector2( -90.2191, 409.436 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/LeftWall"]
+position = Vector2( 25.6434, 0.507172 )
+shape = SubResource( 2 )
+
+[node name="TopWall" type="StaticBody2D" parent="Boundaries"]
+position = Vector2( 568.05, -64.8147 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/TopWall"]
+shape = SubResource( 3 )
+
+[node name="BottomWall" type="StaticBody2D" parent="Boundaries"]
+position = Vector2( 720.669, 816.875 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/BottomWall"]
+shape = SubResource( 4 )
