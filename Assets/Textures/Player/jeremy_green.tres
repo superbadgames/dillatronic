@@ -1,0 +1,89 @@
+[gd_resource type="SpriteFrames" load_steps=25 format=2]
+
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/UpStrike2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/UpStrike1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/DownStrike2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/DownStrike1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/UpStrike3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/DownStrike3.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/RightStrike1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/LeftStrike3.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/RightStrike2.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/RightStrike3.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/LeftStrike1.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Up2.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Down2.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Left2.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Up3.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Down1.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Left1.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Right1.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Down3.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Right3.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Left3.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/LeftStrike2.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Right2.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Textures/Player/Jeremy/Green/Up1.png" type="Texture" id=24]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 22 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "attack_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 14 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "idle_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "attack_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 23 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "attack_back",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 12 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "walk_back",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "idle_front",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "idle_back",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 13 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "walk_front",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "attack_front",
+"speed": 5.0
+} ]
