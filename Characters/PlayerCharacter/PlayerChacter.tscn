@@ -3,8 +3,9 @@
 [ext_resource path="res://Characters/PlayerCharacter/PlayerCharacter.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures/Player/jeremy_green.tres" type="SpriteFrames" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.1095, 20.898 )
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 8.22195
+height = 0.382599
 
 [node name="PlayerChacter" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -14,8 +15,7 @@ frames = ExtResource( 2 )
 animation = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( -0.471954, 5.1913 )
+position = Vector2( -0.471954, 7.1913 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
