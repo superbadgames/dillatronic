@@ -28,6 +28,7 @@ func _process(delta):
 
 
 func _Attack():
+	print("ATTACK!")
 	_attacking = true
 
 
@@ -43,7 +44,6 @@ func _InputCheck():
 		return
 	
 	if Input.is_action_pressed("move_up"):
-		print("Move up pressed...")
 		_velocity.y = -_speed
 		_facing = FACING.back
 	if Input.is_action_pressed("move_down"):
